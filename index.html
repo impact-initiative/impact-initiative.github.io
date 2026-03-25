@@ -22,12 +22,18 @@
       position: relative;
       height: 60vh;
       min-height: 400px;
-      background: url("images/banner.png") center/cover no-repeat;
+      background:
+        linear-gradient(rgba(17, 41, 73, 0.45), rgba(17, 41, 73, 0.45)),
+        url("images/banner.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      padding: 56px 20px 42px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
     .hero .overlay {
       background: rgba(15, 23, 42, 0.65); /* dark overlay for readability */
       padding: 40px;
@@ -57,11 +63,6 @@
     a { color: var(--primary-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .hero {
-      background: linear-gradient(135deg, #112949 0%, #234b86 100%);
-      color: white;
-      padding: 56px 20px 42px;
-    }
     .hero-inner { max-width: var(--maxw); margin: 0 auto; }
     .eyebrow {
       display: inline-block;
@@ -288,13 +289,13 @@
 </head>
 <body>
   <header class="hero">
-    <div class="overlay">
-      <div class="eyebrow">ACMMM 2026</div>
-      <h1>IMPACT: Impact-aware Multimodal Persuasive Analysis and Contextual Trust</h1>
-      <p>
-        A workshop on multimedia-native, persuasion-optimized misinformation, bringing together
-        multimedia forensics, multimodal reasoning, provenance, trust, robustness, and human-centered verification.
-      </p>
+    <div class="hero-inner">
+        <div class="eyebrow">ACMMM 2026</div>
+        <h1>IMPACT: Impact-aware Multimodal Persuasive Analysis and Contextual Trust</h1>
+        <p>
+          A workshop on multimedia-native, persuasion-optimized misinformation, bringing together
+          multimedia forensics, multimodal reasoning, provenance, trust, robustness, and human-centered verification.
+        </p>
     </div>
   </header>
 
@@ -446,7 +447,7 @@
         <h3 class="subsection-title">Workshop Coordination</h3>
         <div class="person-card">
           <div class="profile-card">
-            <img class="profile-photo" src="images/gagandeep-placeholder.png" alt="Gagandeep Singh" />
+            <img class="profile-photo" src="images/gagandeep-placeholder.jpg" alt="Gagandeep Singh" />
             <div>
               <h3>Gagandeep Singh</h3>
               <p><strong>The University of Queensland, Australia</strong></p>
