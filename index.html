@@ -20,68 +20,50 @@
     }
     .hero {
       position: relative;
-      height: 60vh;
-      min-height: 400px;
-      background:
-        linear-gradient(rgba(17, 41, 73, 0.45), rgba(17, 41, 73, 0.45)),
-        url("images/banner.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: white;
-      padding: 56px 20px 42px;
+      min-height: 460px;
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-    .hero .overlay {
-      background: rgba(15, 23, 42, 0.65); /* dark overlay for readability */
-      padding: 40px;
-      border-radius: 12px;
-      text-align: center;
+      overflow: hidden;
+      color: white;
+      padding: 56px 20px 42px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .hero-banner {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 41, 73, 0.5);
+      z-index: 1;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
     }
-    a { color: var(--primary-2); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    .hero-inner { max-width: var(--maxw); margin: 0 auto; }
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.92rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      opacity: 0.9;
-      margin-bottom: 10px;
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
     .hero h1 {
       margin: 0 0 14px;
       font-size: clamp(2rem, 4vw, 3.2rem);
       line-height: 1.15;
-      max-width: 950px;
     }
-    .hero p { margin: 0; max-width: 980px; font-size: 1.08rem; opacity: 0.96; }
+
+    .hero p {
+      margin: 0;
+      font-size: 1.08rem;
+      opacity: 0.95;
+    }
 
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 48px; }
     .quick-grid {
@@ -289,16 +271,19 @@
 </head>
 <body>
   <header class="hero">
-    <div class="overlay">
-        <div class="eyebrow">ACMMM 2026</div>
-        <h1>IMPACT: Impact-aware Multimodal Persuasive Analysis and Contextual Trust</h1>
-        <p>
-          A workshop on multimedia-native, persuasion-optimized misinformation, bringing together
-          multimedia forensics, multimodal reasoning, provenance, trust, robustness, and human-centered verification.
-        </p>
+    <img class="hero-banner" src="images/banner.png" alt="IMPACT banner" />
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="eyebrow">ACMMM 2026</div>
+      <h1>IMPACT: Impact-aware Multimodal Persuasive Analysis and Contextual Trust</h1>
+      <p>
+        A workshop on multimedia-native, persuasion-optimized misinformation,
+        bringing together multimedia forensics, multimodal reasoning,
+        provenance, trust, robustness, and human-centered verification.
+      </p>
     </div>
   </header>
-
   <main class="wrap">
     <section class="quick-grid">
       <div class="card pad">
@@ -396,7 +381,7 @@
           The organizing team spans multimedia forensics and authentication, multimodal learning and reasoning,
           privacy and trustworthy systems, and large-scale social and behavioral computing.
         </p>
-
+        <h3 class="subsection-title">General Chairs</h3>
         <div class="people-list">
           <div class="person-card">
             <div class="profile-card">
@@ -444,7 +429,7 @@
           </div>
         </div>
 
-        <h3 class="subsection-title">Workshop Coordination</h3>
+        <h3 class="subsection-title">Student Program & Challenge Chair</h3>
         <div class="person-card">
           <div class="profile-card">
             <img class="profile-photo" src="images/gagandeep-placeholder.jpg" alt="Gagandeep Singh" />
@@ -452,7 +437,7 @@
               <h3>Gagandeep Singh</h3>
               <p><strong>The University of Queensland, Australia</strong></p>
               <p>Email: <a href="mailto:gagandeep.singh2@student.uq.edu.au">gagandeep.singh2@student.uq.edu.au</a></p>
-              <p style="margin-top:10px;">Workshop coordination, website support, and challenge-track logistics.</p>
+              <p style="margin-top:10px;">Research Assistant and Software Engineering student at The University of Queensland, working on multimodal misinformation detection.</p>
             </div>
           </div>
         </div>
