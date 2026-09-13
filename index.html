@@ -100,7 +100,7 @@
       display: grid;
       grid-template-columns: 1.2fr 0.9fr;
       gap: 22px;
-      margin-top: 32px; /* was -24px */
+      margin-top: 32px;
       position: relative;
       z-index: 2;
     }
@@ -265,6 +265,14 @@
       font-weight: 500;
     }
 
+    .speaker-status {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--primary-2);
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -319,6 +327,185 @@
       margin-top: 18px;
     }
 
+    /* ---------- SCHEDULE ---------- */
+    .schedule-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 20px;
+    }
+
+    .schedule-wrap {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.96rem;
+    }
+
+    .schedule-table th {
+      text-align: left;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 14px;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+    }
+
+    .schedule-table td {
+      padding: 13px 14px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .schedule-table td.time {
+      white-space: nowrap;
+      font-weight: 600;
+      color: var(--primary);
+      width: 15%;
+    }
+
+    .schedule-table td.type { width: 14%; color: var(--muted); }
+
+    .schedule-table .title { font-weight: 500; }
+
+    .schedule-table .authors {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .schedule-table .affil {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .row-keynote { background: #eef4ff; }
+    .row-keynote td.type { color: var(--primary); font-weight: 600; }
+    .row-break { background: #fafbfe; }
+    .row-break td { color: var(--muted); }
+    .row-frame td { color: var(--muted); }
+
+    .tz-tag {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--primary-2);
+      background: #fff;
+      border: 1px solid #d5e2fb;
+      border-radius: 999px;
+      padding: 3px 9px;
+      white-space: nowrap;
+    }
+
+    /* ---------- CHALLENGE ---------- */
+    .code-block {
+      background: #0f2340;
+      color: #dce7fa;
+      border-radius: 14px;
+      padding: 16px 18px;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.86rem;
+      line-height: 1.65;
+      margin: 12px 0 0;
+    }
+
+    .code-block .cm { color: #8fb4e8; }
+
+    .field-table, .timeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .field-table th, .timeline-table th {
+      text-align: left;
+      background: var(--highlight);
+      color: var(--primary);
+      font-weight: 600;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+    }
+
+    .field-table td, .timeline-table td {
+      padding: 10px 14px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .timeline-table td:first-child {
+      font-weight: 600;
+      color: var(--primary);
+      white-space: nowrap;
+      width: 34%;
+    }
+
+    .field-table td:first-child {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88rem;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .track-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary-2);
+      border-radius: 14px;
+      padding: 16px 18px;
+      background: #fff;
+      margin-top: 14px;
+    }
+
+    .track-card h4 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .track-card p { margin: 0 0 8px; }
+
+    .track-card .metric-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .contact-box {
+      margin-top: 20px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 16px;
+      padding: 20px 22px;
+    }
+
+    .contact-box h3 {
+      margin: 0 0 8px;
+      color: #fff;
+      font-size: 1.15rem;
+    }
+
+    .contact-box p { margin: 0 0 6px; color: rgba(255,255,255,0.9); }
+
+    .contact-box a { color: #ffffff; font-weight: 600; }
+
     .footer {
       max-width: var(--maxw);
       margin: 34px auto 50px;
@@ -327,21 +514,14 @@
       font-size: 0.95rem;
     }
 
-    /* ---------- BUTTONS ---------- */
-    .btn {
-      padding: 11px 16px;
-      border-radius: 12px;
-      font-weight: 500;
-      border: 1px solid var(--primary);
-      transition: 0.2s ease;
-    }
-
-    .btn.primary { background: var(--primary); color: white; }
-    .btn.secondary { background: white; color: var(--primary); }
-
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 980px) {
       .quick-grid, .two-col, .three-col { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .schedule-wrap { overflow-x: auto; }
+      .schedule-table { min-width: 640px; }
     }
 
     @media (max-width: 640px) {
@@ -397,6 +577,7 @@
           <tr><td>Author Notification</td><td>12 August (UPDATED)</td></tr>
           <tr><td>Camera-Ready</td><td>20 August</td></tr>
           <tr><td>Author Registration</td><td>20 August</td></tr>
+          <tr><td>Workshop Day</td><td>10 November 2026, Rio de Janeiro</td></tr>
         </table>
         <div class="note-box">Final dates are aligned with the official ACM MM 2026 workshop schedule.</div>
       </div>
@@ -432,6 +613,12 @@
           and human-centered verification systems. The workshop is designed not just around
           benchmark accuracy, but around <strong>robustness, auditability, severity awareness,
           and deployment value</strong>.
+        </p>
+        <p>
+          The 2026 edition runs as a <strong>full-day workshop on 10 November 2026</strong> at ACM Multimedia
+          in Rio de Janeiro, with four keynotes, eight accepted oral presentations, the T-IMPACT dataset
+          challenge session, and a community discussion. The full programme is on the
+          <strong>Schedule</strong> tab.
         </p>
 
         <h3 class="subsection-title">Scope and Topics</h3>
@@ -511,7 +698,7 @@
           </div>
         </div>
 
-        <h3 class="subsection-title">Program & Challenge Chair</h3>
+        <h3 class="subsection-title">Program &amp; Challenge Chair</h3>
         <div class="person-card">
           <div class="profile-card">
             <img class="profile-photo" src="images/gagandeep-placeholder.jpg" alt="Gagandeep Singh" />
@@ -572,31 +759,226 @@
       </section>
 
       <section class="tab-panel" id="schedule">
-        <h2 class="section-title">Tentative Schedule</h2>
-        <p>TBA</p>
-        <div class="note-box">The final workshop schedule will be published here once keynote and session timings are confirmed.</div>
+        <h2 class="section-title">Schedule</h2>
+        <p class="lead">
+          IMPACT 2026 runs as a full-day workshop on <strong>Tuesday 10 November 2026</strong> at ACM Multimedia 2026
+          in Rio de Janeiro. All times are given in Brasília time (BRT, UTC&minus;3).
+        </p>
+        <div class="schedule-meta">
+          <span class="chip">10 November 2026</span>
+          <span class="chip">09:00 &ndash; 17:00 BRT</span>
+          <span class="chip">4 Keynotes</span>
+          <span class="chip">8 Oral Presentations</span>
+          <span class="chip">T-IMPACT Challenge Session</span>
+        </div>
+
+        <div class="schedule-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Time (BRT)</th>
+                <th>Session</th>
+                <th>Title, authors and affiliations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-frame">
+                <td class="time">09:00 &ndash; 09:10</td>
+                <td class="type">Opening</td>
+                <td>
+                  <span class="title">Welcome and workshop opening</span>
+                  <span class="authors">IMPACT 2026 Organising Committee</span>
+                </td>
+              </tr>
+
+              <tr class="row-keynote">
+                <td class="time">09:10 &ndash; 09:40</td>
+                <td class="type">Keynote</td>
+                <td>
+                  <span class="title">Keynote address (title TBC)</span>
+                  <span class="authors">Mohan Kankanhalli</span>
+                  <span class="affil">National University of Singapore</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">09:40 &ndash; 10:00</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">SafeV-JEPA: World-Model Plausibility Lets You Measure Synthetic-Video Risks</span>
+                  <span class="authors">Arkaprabha Bhandari, Sridurgesh Ravichandran, Sanjay Saha, Mohan Kankanhalli</span>
+                  <span class="affil">National University of Singapore</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">10:00 &ndash; 10:20</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">TrustLift: When Images Make False Claims Look True</span>
+                  <span class="authors">Aleksei Borodulin, Igor Masich, Vadim Tynchenko, Vladimir Nelyub, Ivan Malashin</span>
+                  <span class="affil">Bauman Moscow State Technical University; Siberian Federal University (Igor Masich)</span>
+                </td>
+              </tr>
+
+              <tr class="row-break">
+                <td class="time">10:20 &ndash; 10:50</td>
+                <td class="type">Break</td>
+                <td><span class="title">Coffee break and networking</span></td>
+              </tr>
+
+              <tr class="row-keynote">
+                <td class="time">10:50 &ndash; 11:20</td>
+                <td class="type">Keynote</td>
+                <td>
+                  <span class="title">Keynote address (title TBC)</span>
+                  <span class="authors">Vivek K. Singh</span>
+                  <span class="affil">Rutgers, The State University of New Jersey</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">11:20 &ndash; 11:40</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">When Agents Have Faces: Deepfake Avatars, Emotion Signals, and Strategic Trust in Human&ndash;LLM Interaction</span>
+                  <span class="authors">Konstantin Mortikov, Aliaksandr Karatai, Evgeniy Bessonnitsyn, Mikhail Mozikov, Valeria Bodishtianu, Ilya Makarov, Sergey Muravyov</span>
+                  <span class="affil">ITMO University; AIRI; The University of Western Australia; ISP RAS; Innopolis University</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">11:40 &ndash; 12:00</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">Adaptive Dual-Channel Diffusion of Disinformation and Correction with LLM-Calibrated Influence on Networks</span>
+                  <span class="authors">Navnidhi Gandhi, Gagandeep Singh, Samya Muhuri, Priyanka Singh</span>
+                  <span class="affil">Thapar Institute of Engineering &amp; Technology; The University of Queensland</span>
+                </td>
+              </tr>
+
+              <tr class="row-break">
+                <td class="time">12:00 &ndash; 13:00</td>
+                <td class="type">Break</td>
+                <td><span class="title">Lunch</span></td>
+              </tr>
+
+              <tr class="row-keynote">
+                <td class="time">13:00 &ndash; 13:30</td>
+                <td class="type">Keynote</td>
+                <td>
+                  <span class="title">Keynote address (title TBC)</span>
+                  <span class="authors">Abdulmotaleb El Saddik</span>
+                  <span class="affil">University of Ottawa</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">13:30 &ndash; 13:50</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">D-SECURE: Dual-Source Evidence Combination for Unified Reasoning in Misinformation Detection</span>
+                  <span class="authors">Gagandeep Singh, Samudi Amarasinghe, Priyanka Singh</span>
+                  <span class="affil">The University of Queensland</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">13:50 &ndash; 14:10</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">T-IMPACT: A Severity-Aware Benchmark for Contextual Image&ndash;Text Manipulation</span>
+                  <span class="authors">Gagandeep Singh, Aaditya Yadav, Priyanka Singh</span>
+                  <span class="affil">The University of Queensland; Brisbane, Australia</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">14:10 &ndash; 14:40</td>
+                <td class="type">Challenge</td>
+                <td>
+                  <span class="title">T-IMPACT Dataset Challenge</span>
+                  <span class="authors">Gagandeep Singh, Aaditya Yadav, Priyanka Singh</span>
+                  <span class="affil">The University of Queensland; Brisbane, Australia</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="time">14:40 &ndash; 15:00</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">ExactUMM: Exact Task and Data Unlearning via Model Merging</span>
+                  <span class="authors">Shogo Terashima, Priyanka Singh, Zihan Wang, Guangdong Bai</span>
+                  <span class="affil">The University of Queensland</span>
+                </td>
+              </tr>
+
+              <tr class="row-break">
+                <td class="time">15:00 &ndash; 15:30</td>
+                <td class="type">Break</td>
+                <td><span class="title">Coffee break and networking</span></td>
+              </tr>
+
+              <tr>
+                <td class="time">15:30 &ndash; 15:50</td>
+                <td class="type">Oral</td>
+                <td>
+                  <span class="title">Evaluating the Trust and Provenance Guarantees of Multimedia Authentication Codes: a Visualization-Driven Deep Cryptanalytic Assessment of SipHash</span>
+                  <span class="authors">Virendra Kumar Gautam, Dipesh Makwane, Anurag Dutta, Rajat Subhra Chakraborty</span>
+                  <span class="affil">Indian Institute of Technology Kharagpur</span>
+                </td>
+              </tr>
+
+              <tr class="row-frame">
+                <td class="time">15:50 &ndash; 16:10</td>
+                <td class="type">Discussion</td>
+                <td>
+                  <span class="title">IMPACT community discussion and audience Q&amp;A</span>
+                  <span class="authors">All speakers and participants</span>
+                </td>
+              </tr>
+
+              <tr class="row-frame">
+                <td class="time">16:10 &ndash; 16:15</td>
+                <td class="type">Transition</td>
+                <td><span class="title">Remote keynote connection and AV check</span></td>
+              </tr>
+
+              <tr class="row-keynote">
+                <td class="time">16:15 &ndash; 16:45</td>
+                <td class="type">Keynote</td>
+                <td>
+                  <span class="title">Keynote address (title TBC)</span>
+                  <span class="authors">Siwei Lyu</span>
+                  <span class="affil">University at Buffalo, State University of New York (SUNY)</span>
+                  <span class="tz-tag">Fixed slot &middot; 14:15&ndash;14:45 Buffalo EST</span>
+                </td>
+              </tr>
+
+              <tr class="row-frame">
+                <td class="time">16:45 &ndash; 17:00</td>
+                <td class="type">Closing</td>
+                <td>
+                  <span class="title">Conclusions, acknowledgements and workshop close</span>
+                  <span class="authors">IMPACT 2026 Organising Committee</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note-box">
+          Session times are final subject to the ACM MM 2026 venue programme; Siwei Lyu's keynote is a fixed
+          slot to accommodate the time difference with Buffalo (EST, UTC&minus;5). Keynote talk titles are TBC
+          and will be added here once confirmed.
+        </div>
       </section>
 
       <section class="tab-panel" id="speakers">
-        <h2 class="section-title">Tentative Keynote Speakers</h2>
-        <p class="muted">The proposed speakers bring complementary perspectives across multimedia forensics, provenance security, trustworthy systems, and persuasive misinformation analysis.</p>
+        <h2 class="section-title">Keynote Speakers</h2>
+        <p class="muted">The keynote programme brings complementary perspectives across multimedia forensics, computational social science, multimedia systems and digital twins, and persuasive misinformation analysis. Speakers are listed in programme order.</p>
 
         <div class="people-list">
-          <div class="speaker-card">
-            <div class="profile-card">
-              <img class="profile-photo" src="images/siwei-lyu.jpg" alt="Siwei Lyu" />
-              <div>
-                <h3>Siwei Lyu</h3>
-                <p><strong>University at Buffalo, SUNY</strong></p>
-                <p style="margin-top:10px;">A globally recognized leader in multimedia forensics, authenticity, and deepfake detection. His work aligns strongly with persuasion-oriented misinformation, provenance, and accountability in visual evidence.</p>
-                <div class="profile-links">
-                  <a class="profile-link" href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory.host.html/content/shared/engineering/computer-science-engineering/profiles/faculty/ladder/lyu-siwei.detail.html" target="_blank" rel="noopener">Homepage</a>
-                </div>
-                <span class="speaker-status">Tentative · Virtual if required</span>
-              </div>
-            </div>
-          </div>
-
           <div class="speaker-card">
             <div class="profile-card">
               <img class="profile-photo" src="images/mohan-kankanhalli.jpg" alt="Mohan S. Kankanhalli" />
@@ -607,99 +989,334 @@
                 <div class="profile-links">
                   <a class="profile-link" href="https://www.comp.nus.edu.sg/cs/people/mohan/" target="_blank" rel="noopener">Homepage</a>
                 </div>
-                <span class="speaker-status">Confirmed · Virtual if required</span>
+                <span class="speaker-status">Keynote &middot; 09:10&ndash;09:40 BRT</span>
               </div>
             </div>
           </div>
 
           <div class="speaker-card">
             <div class="profile-card">
-              <img class="profile-photo" src="images/ryan-ko.jpeg" alt="Ryan Ko" />
+              <img class="profile-photo" src="images/Vivek.jpg" alt="Vivek K. Singh" />
               <div>
-                <h3>Ryan Ko</h3>
-                <p><strong>The University of Queensland</strong></p>
-                <p style="margin-top:10px;">Chair Professor of Cyber Security and Director of Research at UQ EECS. His expertise supports the workshop’s focus on secure and accountable infrastructures for misinformation response.</p>
+                <h3>Vivek K. Singh</h3>
+                <p><strong>Rutgers, The State University of New Jersey</strong></p>
+                <p style="margin-top:10px;">Professor in the School of Communication and Information and Director of the Behavioral Informatics Lab at Rutgers. His work sits at the intersection of computational social science, data science, and multimedia information systems, with a sustained focus on fairness and accuracy in web-scale content analysis.</p>
                 <div class="profile-links">
-                  <a class="profile-link" href="https://about.uq.edu.au/experts/23784" target="_blank" rel="noopener">Homepage</a>
+                  <a class="profile-link" href="https://sci.rutgers.edu/singh-vivek-k" target="_blank" rel="noopener">Homepage</a>
                 </div>
-                <span class="speaker-status">Confirmed · Virtual if required</span>
+                <span class="speaker-status">Keynote &middot; 10:50&ndash;11:20 BRT</span>
               </div>
             </div>
           </div>
 
           <div class="speaker-card">
             <div class="profile-card">
-              <img class="profile-photo" src="images/helen-huang.jpeg" alt="Helen Huang" />
+              <img class="profile-photo" src="images/Abdul.jpg" alt="Abdulmotaleb El Saddik" />
               <div>
-                <h3>Helen Huang</h3>
-                <p><strong>The University of Queensland</strong></p>
-                <p style="margin-top:10px;">Professor at UQ working on large-scale data mining, trustworthy machine learning, robustness, fairness, and reliable AI deployment.</p>
+                <h3>Abdulmotaleb El Saddik</h3>
+                <p><strong>University of Ottawa</strong></p>
+                <p style="margin-top:10px;">Distinguished University Professor at the University of Ottawa, Director of the Multimedia Communications Research Laboratory, and Editor-in-Chief of ACM Transactions on Multimedia Computing, Communications and Applications. His research spans intelligent multimedia computing, haptics, and digital twins built on AI, IoT, and secure multimodal interaction.</p>
                 <div class="profile-links">
-                  <a class="profile-link" href="https://about.uq.edu.au/experts/1230" target="_blank" rel="noopener">Homepage</a>
+                  <a class="profile-link" href="https://www.uottawa.ca/faculty-engineering/school-electrical-engineering-computer-science/directory/abdulmotaleb-el-saddik" target="_blank" rel="noopener">Homepage</a>
                 </div>
-                <span class="speaker-status">Confirmed · Virtual if required</span>
+                <span class="speaker-status">Keynote &middot; 13:00&ndash;13:30 BRT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="speaker-card">
+            <div class="profile-card">
+              <img class="profile-photo" src="images/siwei-lyu.jpg" alt="Siwei Lyu" />
+              <div>
+                <h3>Siwei Lyu</h3>
+                <p><strong>University at Buffalo, State University of New York (SUNY)</strong></p>
+                <p style="margin-top:10px;">A globally recognized leader in multimedia forensics, authenticity, and deepfake detection. His work aligns strongly with persuasion-oriented misinformation, provenance, and accountability in visual evidence.</p>
+                <div class="profile-links">
+                  <a class="profile-link" href="https://engineering.buffalo.edu/computer-science-engineering/people/faculty-directory.host.html/content/shared/engineering/computer-science-engineering/profiles/faculty/ladder/lyu-siwei.detail.html" target="_blank" rel="noopener">Homepage</a>
+                </div>
+                <span class="speaker-status">Keynote &middot; 16:15&ndash;16:45 BRT (remote, fixed slot)</span>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="note-box">Keynote talk titles are TBC and will be published here as they are confirmed.</div>
       </section>
 
       <section class="tab-panel" id="challenge">
-        <h2 class="section-title">T-IMPACT Challenge</h2>
-        <p>
+        <h2 class="section-title">T-IMPACT Dataset Challenge</h2>
+        <p class="lead">
           A central objective of IMPACT is to catalyze reproducible progress on
-          <strong>impact-aware integrity</strong>, where the goal is not only to decide whether content is manipulated,
-          but to quantify <strong>how it misleads</strong> and <strong>how harmful it could be</strong> if consumed and shared.
+          <strong>impact-aware integrity</strong>, where the goal is not only to decide whether content is
+          manipulated, but to quantify <strong>how it misleads</strong> and <strong>how harmful it could be</strong>
+          if consumed and shared. The T-IMPACT challenge puts that goal into a shared evaluation.
+        </p>
+
+        <div class="chips" aria-label="Challenge at a glance">
+          <span class="chip">Two ranked tasks + one explainability track</span>
+          <span class="chip">Email submission (ZIP)</span>
+          <span class="chip">Registration open now</span>
+          <span class="chip">Held-out test labels</span>
+          <span class="chip">Robustness subset</span>
+          <span class="chip">Results session 14:10 BRT, 10 Nov 2026</span>
+        </div>
+
+        <h3 class="subsection-title">Basis</h3>
+        <p>
+          The challenge runs on the dataset and severity protocol introduced in the T-IMPACT benchmark paper,
+          presented at this workshop in the slot immediately before the challenge session:
+          <em>T-IMPACT: A Severity-Aware Benchmark for Contextual Image&ndash;Text Manipulation</em>,
+          Gagandeep Singh, Aaditya Yadav and Priyanka Singh, The University of Queensland, in the ACM Multimedia
+          2026 workshop proceedings (<a href="https://doi.org/10.1145/3841453.3841500" target="_blank" rel="noopener">DOI 10.1145/3841453.3841500</a>,
+          <a href="https://arxiv.org/abs/2606.22339" target="_blank" rel="noopener">preprint</a>).
+          The five severity components, the isotonic calibration of the severity score, the band boundaries and
+          the manipulation taxonomy used for scoring are all defined there, and participants should read it before
+          building a system. Entries that report on T-IMPACT are asked to cite the paper.
         </p>
 
         <h3 class="subsection-title">Challenge Motivation</h3>
         <p>
           Existing benchmarks often reward binary detection while failing to capture realistic manipulations
           involving subtle visual edits, narrative reframing, contextual distortion, and multimodal persuasion.
-          The T-IMPACT challenge is designed to reward robustness, calibrated confidence, and explainable outputs,
-          not just narrowly defined benchmark accuracy.
+          A system that flags a crude splice but cannot separate a harmless retouch from a caption swap that
+          reassigns a disaster photograph to a different conflict is of limited use to a newsroom or a platform
+          triage queue. T-IMPACT is therefore scored on graded severity and calibration as well as detection,
+          and rewards robustness and explainable evidence rather than narrowly defined benchmark accuracy.
         </p>
 
-        <h3 class="subsection-title">Dataset Overview</h3>
+        <h3 class="subsection-title">Dataset and Splits</h3>
         <p>
-          T-IMPACT consists of paired authentic and manipulated multimedia items reflecting real misinformation
-          strategies across political events, public health, disasters, and conflict reporting. Samples are structured
-          around image-text pairs, with optional metadata depending on release tier. Manipulations include:
+          T-IMPACT consists of paired authentic and manipulated image&ndash;text items reflecting real
+          misinformation strategies across political events, public health, disasters, and conflict reporting.
+          Each manipulated item carries a manipulation type label, a graded severity score derived from five
+          severity components and isotonically calibrated, an ordinal severity band, and localization signals
+          for the altered image regions and text spans. Manipulations include object insertion, removal,
+          compositing, inpainting and localized attribute changes; caption swaps, narrative reframing and
+          temporal or geographic misattribution; and mixed cases where both modalities are altered.
         </p>
-        <ul>
-          <li>Object insertion, removal, compositing, inpainting, and localized attribute changes</li>
-          <li>Caption swaps, narrative reframing, temporal or geographic misattribution</li>
-          <li>Mixed cases where both modalities are altered</li>
-        </ul>
-
-        <h3 class="subsection-title">Annotations and Supervision</h3>
-        <ul>
-          <li>Manipulation type labels and descriptors of narrative distortion</li>
-          <li>Severity / impact supervision as graded scores or ordinal categories</li>
-          <li>Localization signals such as manipulated regions and token-level text highlights</li>
-        </ul>
+        <table class="field-table">
+          <thead>
+            <tr><th>Split</th><th>Contents</th><th>Availability</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>train</td>
+              <td>Images, captions and the full annotation set including severity components and localization masks</td>
+              <td>Released with the starter kit on registration</td>
+            </tr>
+            <tr>
+              <td>val</td>
+              <td>Same annotation schema as train; intended for model selection and for validating submission formatting</td>
+              <td>Released with the starter kit on registration</td>
+            </tr>
+            <tr>
+              <td>test</td>
+              <td>Images and captions only, with <code>item_id</code>. Includes a robustness subset carrying compression, rescaling and paraphrase perturbations of items drawn from the same source pool</td>
+              <td>Released to registered teams on registration; labels are never distributed</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top:10px;">
+          The robustness subset is not identified in the released files. Teams submit a single prediction file
+          covering the whole test split, and organizers report clean, perturbed and delta scores separately.
+        </p>
 
         <h3 class="subsection-title">Tasks and Tracks</h3>
-        <ul>
-          <li><strong>Task 1:</strong> Authenticity classification</li>
-          <li><strong>Task 2:</strong> Severity / impact estimation</li>
-          <li><strong>Task 3:</strong> Evidence localization (optional but strongly encouraged)</li>
-        </ul>
 
-        <h3 class="subsection-title">Evaluation Protocol</h3>
-        <ul>
-          <li>Classification: Accuracy, Precision/Recall, F1, ROC-AUC</li>
-          <li>Severity: MAE, RMSE, Spearman correlation, ordinal consistency</li>
-          <li>Localization: IoU-based metrics and token-level F1 where applicable</li>
-          <li>Stratified results by manipulation type and domain</li>
-          <li>Robustness reporting under shift conditions</li>
-        </ul>
+        <div class="track-card">
+          <h4>Task 1 &mdash; Authenticity classification (ranked)</h4>
+          <p>
+            Given an image&ndash;text pair, decide whether the item has been manipulated in either modality.
+            Submissions provide a binary decision and a calibrated confidence, so that over-confident detectors
+            are penalized rather than rewarded.
+          </p>
+          <p class="metric-line">
+            Primary metric: macro-F1. Secondary: ROC-AUC, precision/recall at the submitted threshold,
+            and expected calibration error. Ties broken on ROC-AUC.
+          </p>
+        </div>
 
-        <h3 class="subsection-title">Leaderboard and Infrastructure</h3>
-        <p>A public leaderboard will rank Task 1 and Task 2. Task 3 will be supported as an explainability track and highlighted qualitatively. The challenge infrastructure is planned for a public evaluation platform such as <strong>CodaLab</strong> or <strong>EvalAI</strong>.</p>
+        <div class="track-card">
+          <h4>Task 2 &mdash; Severity and impact estimation (ranked)</h4>
+          <p>
+            Predict how misleading the item is, as a continuous severity score in [0, 1] and as an ordinal band.
+            This is the task the benchmark exists for: two items may both be manipulated while differing by an
+            order of magnitude in the harm they could cause if shared.
+          </p>
+          <p class="metric-line">
+            Primary metric: Spearman rank correlation against the calibrated severity score. Secondary: MAE, RMSE,
+            and ordinal consistency (adjacent-band accuracy) over the bands. Ties broken on MAE.
+          </p>
+        </div>
+
+        <div class="track-card">
+          <h4>Task 3 &mdash; Evidence localization (explainability track, unranked)</h4>
+          <p>
+            Return the evidence behind the decision: manipulated image regions as bounding boxes and manipulated
+            or misleading text as character spans. This track is judged qualitatively rather than placed on a
+            leaderboard, and strong entries are invited to demo their outputs in the challenge session.
+          </p>
+          <p class="metric-line">
+            Reported metrics: IoU-based region scores and token-level F1, alongside organizer review of a sampled
+            set of cases including the failure cases.
+          </p>
+        </div>
+
+        <p style="margin-top:16px;">
+          Teams may enter Task 1 alone, Task 2 alone, or both. Task 3 requires an entry in at least one ranked task.
+          All results are additionally stratified by manipulation type and domain, so a system that wins overall
+          while collapsing on one domain is visible as such in the report.
+        </p>
+
+        <h3 class="subsection-title">Overall Ranking</h3>
+        <p>
+          Task 1 and Task 2 are ranked independently on their primary metrics. An overall standing is computed as
+          the mean of a team's two task ranks, for teams that entered both. A team that enters one task is ranked
+          in that task only and is not eligible for the overall standing.
+        </p>
+
+        <h3 class="subsection-title">Submission Package</h3>
+        <p>
+          There is no external evaluation server for this edition. Submissions are sent by email as a single ZIP
+          archive named <code>timpact2026_&lt;team_name&gt;.zip</code>, using the subject line
+          <code>[T-IMPACT 2026] Submission &mdash; &lt;team_name&gt;</code>. Archives above 25 MB should be sent as a
+          link to institutional cloud storage with access granted to the submission address.
+        </p>
+
+        <div class="code-block">timpact2026_&lt;team_name&gt;.zip
+├── metadata.json            <span class="cm"># team, tasks entered, resources used</span>
+├── task1_predictions.csv    <span class="cm"># required if entering Task 1</span>
+├── task2_predictions.csv    <span class="cm"># required if entering Task 2</span>
+├── task3_predictions.json   <span class="cm"># optional, explainability track</span>
+└── method.pdf               <span class="cm"># required, max 2 pages + references</span></div>
+
+        <h4 class="subsection-title" style="font-size:1.05rem;">task1_predictions.csv</h4>
+        <div class="code-block">item_id,pred_label,pred_score
+timp_test_000001,1,0.9134
+timp_test_000002,0,0.0271</div>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Type</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>item_id</td><td>string</td><td>Identifier exactly as given in the test split. One row per test item, no omissions.</td></tr>
+            <tr><td>pred_label</td><td>integer</td><td>0 for authentic, 1 for manipulated, at the team's chosen operating threshold.</td></tr>
+            <tr><td>pred_score</td><td>float</td><td>Calibrated probability in [0, 1] that the item is manipulated. Used for ROC-AUC and calibration error.</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="subsection-title" style="font-size:1.05rem;">task2_predictions.csv</h4>
+        <div class="code-block">item_id,severity_score,severity_band
+timp_test_000001,0.7412,high
+timp_test_000002,0.0000,none</div>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Type</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>item_id</td><td>string</td><td>Identifier exactly as given in the test split. One row per test item.</td></tr>
+            <tr><td>severity_score</td><td>float</td><td>Predicted severity in [0, 1]. Authentic items should be predicted at or near 0.</td></tr>
+            <tr><td>severity_band</td><td>string</td><td>One of <code>none</code>, <code>low</code>, <code>moderate</code>, <code>high</code>, <code>severe</code>, following the band definitions in the dataset card.</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="subsection-title" style="font-size:1.05rem;">task3_predictions.json</h4>
+        <div class="code-block">{
+  "timp_test_000001": {
+    "image_regions": [
+      { "bbox": [412, 188, 96, 74], "confidence": 0.88 }
+    ],
+    "text_spans": [
+      { "start": 34, "end": 61, "confidence": 0.72 }
+    ]
+  }
+}</div>
+        <p class="muted">
+          Bounding boxes are <code>[x, y, width, height]</code> in pixels on the released image. Text spans are
+          character offsets into the released caption, end-exclusive. Items with no predicted evidence may be
+          omitted or given empty lists.
+        </p>
+
+        <h4 class="subsection-title" style="font-size:1.05rem;">metadata.json</h4>
+        <div class="code-block">{
+  "team_name": "example_team",
+  "affiliation": "Example University",
+  "contact_email": "lead@example.edu",
+  "members": [
+    { "name": "A. Researcher", "email": "lead@example.edu" }
+  ],
+  "tasks": ["task1", "task2", "task3"],
+  "external_data_used": true,
+  "external_data_description": "Public image-text corpus, no T-IMPACT overlap",
+  "pretrained_models": ["clip-vit-large", "llama-3-8b-instruct"],
+  "compute": "1x A100 80GB, 6 GPU-hours",
+  "consent_to_publish_results": true
+}</div>
+
+        <h4 class="subsection-title" style="font-size:1.05rem;">method.pdf</h4>
+        <p>
+          Up to two pages plus references, in the ACM Multimedia format, describing the architecture, the training
+          and calibration procedure, any external data or pretrained checkpoints, and the failure modes the team
+          observed. A submission without a method description is scored but excluded from the standings, because
+          an unexplained number does not advance the field. Teams are encouraged but not required to release code.
+        </p>
+
+        <h3 class="subsection-title">Timeline</h3>
+        <table class="timeline-table">
+          <tbody>
+            <tr><td>Registration</td><td>Open now, and rolling until the submission deadline</td></tr>
+            <tr><td>Starter kit, train and val released</td><td>On registration</td></tr>
+            <tr><td>Test split released to registered teams</td><td>On registration</td></tr>
+            <tr><td>Submission deadline</td><td>30 October 2026, 23:59 AoE</td></tr>
+            <tr><td>Results notified to teams</td><td>6 November 2026</td></tr>
+            <tr><td>Results and discussion at IMPACT 2026</td><td>10 November 2026, 14:10&ndash;14:40 BRT</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top:10px;">
+          Registration is a short email to the challenge address naming the team, its members and their
+          affiliations. All three splits and the starter kit are returned by reply, so a team can start the same
+          day it registers; test labels are never distributed and the honour-system rules below carry the
+          integrity of the evaluation in place of a timed release window.
+        </p>
+
+        <h3 class="subsection-title">Rules and Eligibility</h3>
+        <p>
+          Teams may submit up to three archives before the deadline and the last valid archive received is the one
+          scored; teams should state plainly in the email if an earlier submission is being superseded. Any
+          publicly available pretrained model or external corpus may be used provided it is declared in
+          <code>metadata.json</code>, and undeclared resources are grounds for withdrawal of a result. Manual
+          annotation of test items, attempts to identify the source of test images, and any use of the robustness
+          structure of the test split are not permitted. Organizers and their immediate research groups may submit
+          for reference but are shown separately and are not ranked. Participation does not require a workshop
+          paper, though teams are welcome to submit their method to a future edition, and at least one member of
+          each shortlisted team is expected to attend the session on site.
+        </p>
+
+        <h3 class="subsection-title">Recognition</h3>
+        <p>
+          The leading team in each ranked task and the strongest explainability entry are announced during the
+          challenge session and listed on this page afterwards, together with a short organizer report covering
+          the stratified and robustness results across all submissions. Shortlisted teams are invited to give a
+          brief description of their approach in the session.
+        </p>
 
         <h3 class="subsection-title">Release, Governance, and Ethics</h3>
-        <p>T-IMPACT will be released with responsible-use terms to support detection and verification research without facilitating misuse. Documentation will describe construction procedures, annotation pipelines, limitations, privacy considerations, and fairness considerations across regions and languages.</p>
+        <p>
+          T-IMPACT is released with responsible-use terms to support detection and verification research without
+          facilitating misuse. Registration requires agreement to those terms, which cover redistribution,
+          retention, and use of the manipulated items. Documentation accompanying the release describes
+          construction procedures, annotation pipelines, limitations, privacy considerations, and fairness
+          considerations across regions and languages. Teams reporting on T-IMPACT are asked to carry those
+          limitations into their own write-ups rather than presenting the severity scores as ground truth about
+          real-world harm.
+        </p>
+
+        <div class="contact-box">
+          <h3>Registration, Submission and Enquiries</h3>
+          <p>Send registrations, submission archives and any questions to
+            <a href="mailto:gagandeep.singh1@uq.edu.au">gagandeep.singh1@uq.edu.au</a>.</p>
+          <p>Submission subject line: <strong>[T-IMPACT 2026] Submission &mdash; &lt;team_name&gt;</strong></p>
+          <p style="margin-top:12px;">
+            <a class="btn secondary" href="mailto:gagandeep.singh1@uq.edu.au?subject=%5BT-IMPACT%202026%5D%20Registration">Register by email</a>
+            <a class="btn secondary" href="mailto:gagandeep.singh1@uq.edu.au?subject=%5BT-IMPACT%202026%5D%20Submission%20%E2%80%94%20%3Cteam_name%3E">Submit archive</a>
+          </p>
+        </div>
       </section>
     </section>
   </main>
